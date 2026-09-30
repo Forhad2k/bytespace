@@ -13,9 +13,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#063eea] bg-[url('/assets/images/background-grid.png')] bg-cover bg-center text-white">
-      <div className="mx-auto grid min-h-16 w-full min-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-[clamp(24px,8.5vw,80px)] max-[700px]:min-h-[58px] max-[700px]:grid-cols-[1fr_auto]">
-        <Link href="/" className="block w-[171px] max-[700px]:w-[94px]">
+    <nav className="absolute inset-x-0 top-0 z-50 bg-transparent text-white">
+      <div className="mx-auto grid min-h-[58px] w-full max-w-[1440px] grid-cols-[1fr_auto] items-center px-6 md:min-h-[68px] md:grid-cols-[1fr_auto_1fr] md:px-[clamp(24px,8.5vw,80px)]">
+        <Link href="/" className="block w-[134px] md:w-[110px]">
           <Image
             src="/assets/logos/header-logo.png"
             alt="ByteSpace"
@@ -26,7 +26,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex items-center gap-5 max-[700px]:hidden">
+        <div className="hidden items-center gap-4 md:flex">
           {links.map((item) => (
             <Link
               key={item.label}
@@ -39,7 +39,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center justify-end gap-4 max-[700px]:hidden">
+        <div className="hidden items-center justify-end gap-3 md:flex">
           <Link className="text-base text-white/90 transition-colors hover:text-[#cbfc01]" href="#login">Sign In</Link>
           <Link className="text-base text-white/90 transition-colors hover:text-[#cbfc01]" href="#join">Join Us</Link>
           <button className="grid place-items-center bg-transparent pl-3" aria-label="Open cart">
@@ -48,13 +48,13 @@ export default function Navbar() {
               alt=""
               width={16}
               height={16}
-              className="h-[24px] w-[24px] brightness-0 invert"
+              className="h-[18px] w-[18px] brightness-0 invert"
             />
           </button>
         </div>
 
         <button
-          className="hidden h-9 w-9 flex-col items-center justify-center gap-[5px] border-0 bg-transparent max-[700px]:flex"
+          className="flex h-9 w-9 flex-col items-center justify-center gap-[5px] border-0 bg-transparent md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
@@ -66,7 +66,7 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="flex flex-col gap-[18px] border-t border-white/15 bg-[#0634c9] px-6 py-[18px] min-[701px]:hidden">
+        <div className="flex flex-col gap-[18px] border-t border-white/15 bg-[#0634c9] px-6 py-[18px] md:hidden">
           {links.map((item) => (
             <Link
               key={item.label}

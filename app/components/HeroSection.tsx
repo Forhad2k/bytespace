@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative isolate h-[calc(100svh-4rem)] overflow-hidden bg-[#063eea] text-white max-[700px]:h-[calc(100svh-58px)]"
+      className="relative isolate h-[100svh] min-h-[600px] overflow-hidden bg-[#063eea] text-white md:min-h-[620px]"
     >
       <div
         aria-hidden="true"
@@ -12,16 +12,16 @@ export default function HeroSection() {
       />
       <div
         aria-hidden="true"
-        className="absolute bottom-[-39%] left-1/2 z-0 aspect-square w-[min(84vw,700px)] -translate-x-1/2 rounded-full bg-[#c8ff00] max-[700px]:bottom-[-30%] max-[700px]:w-[620px]"
+        className="absolute bottom-[-30%] left-1/2 z-0 aspect-square w-[620px] -translate-x-1/2 rounded-full bg-[#c8ff00] md:bottom-[-39%] md:w-[min(84vw,700px)]"
       />
 
       <Image
-        src="/assets/shapes/spring.png"
+        src="/assets/shapes/spring-1.png"
         alt=""
         width={150}
         height={180}
         aria-hidden="true"
-        className="pointer-events-none absolute left-[-15%] top-[17%] z-[1] h-auto w-[385px] rotate-[18deg] object-contain max-[700px]:left-[12%] max-[700px]:top-[27%] max-[700px]:w-[54px]"
+        className="pointer-events-none absolute left-[12%] top-[27%] z-[1] h-auto w-[54px] rotate-[18deg] object-contain md:left-[-15%] md:top-[17%] md:w-[485px]"
       />
       <Image
         src="/assets/shapes/donut shape.png"
@@ -29,7 +29,7 @@ export default function HeroSection() {
         width={160}
         height={160}
         aria-hidden="true"
-        className="pointer-events-none absolute left-[5%] top-[48%] z-[1] h-auto w-[142px] object-contain max-[700px]:left-[4%] max-[700px]:top-[48%] max-[700px]:w-[90px]"
+        className="pointer-events-none absolute left-[4%] top-[48%] z-[1] h-auto w-[90px] object-contain md:bottom-[5%] md:left-[5%] md:top-auto md:w-[442px]"
       />
       <Image
         src="/assets/shapes/Cone.png"
@@ -37,15 +37,15 @@ export default function HeroSection() {
         width={100}
         height={110}
         aria-hidden="true"
-        className="pointer-events-none absolute right-[12%] top-[28%] z-[1] h-auto w-[76px] rotate-[14deg] object-contain max-[700px]:right-[9%] max-[700px]:top-[28%] max-[700px]:w-[56px]"
+        className="pointer-events-none absolute right-[9%] top-[28%] z-[1] h-auto w-[56px] rotate-[14deg] object-contain md:right-[12%] md:w-[76px]"
       />
       <Image
-        src="/assets/shapes/spring.png"
+        src="/assets/shapes/spring-2.png"
         alt=""
         width={180}
         height={220}
         aria-hidden="true"
-        className="pointer-events-none absolute right-[4%] top-[46%] z-[1] h-auto w-[125px] -rotate-12 object-contain max-[700px]:right-[2%] max-[700px]:top-[49%] max-[700px]:w-[82px]"
+        className="pointer-events-none absolute right-[2%] top-[49%] z-[1] h-auto w-[82px] -rotate-12 object-contain md:right-[4%] md:top-[46%] md:w-[125px]"
       />
       <Image
         src="/assets/shapes/cylinder.png"
@@ -53,21 +53,21 @@ export default function HeroSection() {
         width={180}
         height={200}
         aria-hidden="true"
-        className="pointer-events-none absolute right-[-48px] top-[12%] z-[1] h-auto w-[150px] rotate-[24deg] object-contain max-[700px]:right-[-70px] max-[700px]:top-[14%] max-[700px]:w-[125px]"
+        className="pointer-events-none absolute right-[-70px] top-[14%] z-[1] h-auto w-[125px] rotate-[24deg] object-contain md:right-[-48px] md:top-[12%] md:w-[150px]"
       />
 
-      <div className="relative z-[5] mx-auto w-[min(calc(100%-40px),760px)] pt-[clamp(16px,4vh,30px)] text-center max-[700px]:w-[calc(100%-32px)] max-[700px]:pt-[clamp(14px,4vh,26px)]">
-        <h1 className="m-0 text-[40px] font-bold leading-[1.14] text-white max-[700px]:text-[32px] max-[420px]:text-[29px]">
+      <div className="relative z-[5] mx-auto w-[calc(100%-32px)] pt-[clamp(88px,14vh,112px)] text-center md:w-[min(calc(100%-40px),760px)] md:pt-[clamp(88px,13vh,116px)]">
+        <h1 className="m-0 text-[32px] font-bold leading-[1.14] text-white sm:text-[36px] md:text-[46px]">
           Get Access to Hundreds
           <br />
           Courses Available
         </h1>
-        <p className="mx-auto mt-[18px] text-[12px] leading-[1.6] text-white/80 max-[700px]:mt-[15px] max-[700px]:max-w-[400px] max-[700px]:text-[11px]">
+        <p className="mx-auto mt-[15px] max-w-[400px] text-base leading-[1.6] text-white/80 md:mt-[18px] md:max-w-none">
           Unlock your creativity, gain valuable knowledge, and grow your
           business with our wide range of courses.
         </p>
         <form
-          className="mx-auto mt-[28px] flex h-11 w-full max-w-[470px] items-center gap-[9px] rounded-full bg-white py-1 pl-4 pr-1 text-[#89909f] shadow-[0_8px_24px_rgba(0,20,110,0.12)] max-[700px]:mt-[22px]"
+          className="mx-auto mt-[22px] flex h-11 w-full max-w-[470px] items-center gap-[9px] rounded-full bg-white py-1 pl-4 pr-1 text-[#89909f] shadow-[0_8px_24px_rgba(0,20,110,0.12)] md:mt-[28px]"
           action="#courses"
         >
           <svg
@@ -104,21 +104,22 @@ export default function HeroSection() {
         height={520}
         priority
         sizes="(max-width: 640px) 360px, 520px"
-        className="absolute bottom-0 left-1/2 z-[2] h-auto max-h-[78%] w-[min(68vw,520px)] -translate-x-1/2 object-contain max-[700px]:max-h-[68%] max-[700px]:w-[min(92vw,420px)]"
+        style={{ height: "auto" }}
+        className="hero-model-image"
       />
 
-      <div className="absolute left-[calc(50%_-_167px)] top-[39%] z-[4] flex flex-col gap-[3px] rounded-[10px] bg-white px-[11px] py-[10px] text-[10px] text-[#16191f] shadow-[0_10px_30px_rgba(10,21,70,0.16)] max-[700px]:left-[7%] max-[700px]:top-[47%]">
+      <div className="absolute left-[7%] top-[47%] z-[4] flex flex-col gap-[3px] rounded-[10px] bg-white px-[11px] py-[10px] text-[10px] text-[#16191f] shadow-[0_10px_30px_rgba(10,21,70,0.16)] md:left-[calc(50%_-_167px)] md:top-[39%]">
         <strong className="font-medium">UI/UX Design</strong>
         <span className="text-[8px] text-[#8c9098]">200 Courses · 1000+ Students</span>
       </div>
 
-      <div className="absolute right-[calc(50%_-_192px)] top-[40%] z-[4] flex w-[124px] flex-col gap-[5px] rounded-[10px] bg-white px-[10px] pb-[10px] pt-[11px] text-[10px] text-[#16191f] shadow-[0_10px_30px_rgba(10,21,70,0.16)] max-[700px]:right-[7%] max-[700px]:top-[48%] max-[700px]:w-[112px]">
+      <div className="absolute right-[7%] top-[48%] z-[4] flex w-[112px] flex-col gap-[5px] rounded-[10px] bg-white px-[10px] pb-[10px] pt-[11px] text-[10px] text-[#16191f] shadow-[0_10px_30px_rgba(10,21,70,0.16)] md:right-[calc(50%_-_192px)] md:top-[40%] md:w-[124px]">
         <span className="text-[8px] text-[#8c9098]">Learning Progress</span>
         <strong className="text-[26px] leading-none">55%</strong>
         <i className="h-1 rounded-full bg-[linear-gradient(90deg,#cbfc01_55%,#eef0f3_55%)]" />
       </div>
 
-      <div className="absolute left-[calc(50%_-_205px)] top-[54%] z-[4] flex flex-col gap-0.5 rounded-[10px] bg-white p-[10px] text-[10px] text-[#16191f] shadow-[0_10px_30px_rgba(10,21,70,0.16)] max-[700px]:left-[6%] max-[700px]:top-[63%] max-[700px]:p-2">
+      <div className="absolute left-[6%] top-[63%] z-[4] flex flex-col gap-0.5 rounded-[10px] bg-white p-2 text-[10px] text-[#16191f] shadow-[0_10px_30px_rgba(10,21,70,0.16)] md:left-[calc(50%_-_205px)] md:top-[54%] md:p-[10px]">
         <span>Happy Students</span>
         <small className="text-[8px] text-[#8c9098]">4.5 (240) <b className="text-[#c9f400]">★</b></small>
         <div className="mt-1 flex items-center">

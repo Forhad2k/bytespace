@@ -2,109 +2,81 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Alex B.",
-    role: "UX Designer",
-    avatar: "/assets/community/Alex B..png",
-    rating: 5,
+    name: "Sarah M.",
+    role: "Enthusiastic Learner",
+    avatar: "/assets/community/Sarah M..png",
     quote:
-      "ByteSpace completely transformed my career. The UI/UX design course was so hands-on and practical. I landed my dream job within 3 months of completing it!",
+      "ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning.",
   },
   {
     name: "James L.",
-    role: "Full-Stack Developer",
+    role: "Lifelong Learner",
     avatar: "/assets/community/James L..png",
-    rating: 5,
     quote:
-      "The web development bootcamp here is unmatched. The instructors are experts and the community support is incredible. I went from zero to getting hired in 6 months.",
+      "I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development.",
   },
   {
-    name: "Sarah M.",
-    role: "Digital Marketer",
-    avatar: "/assets/community/Sarah M..png",
-    rating: 5,
+    name: "Alex B.",
+    role: "Inspired Creator",
+    avatar: "/assets/community/Alex B..png",
     quote:
-      "I've tried many online platforms, but ByteSpace stands out. The content is always up-to-date and the learning experience feels truly personalized to my goals.",
+      "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally.",
   },
 ];
-
-function StarRow({ count }: { count: number }) {
-  return (
-    <div className="flex gap-1">
-      {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b">
-          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
-        </svg>
-      ))}
-    </div>
-  );
-}
 
 export default function TestimonialsSection() {
   return (
     <section
-      className="w-full py-16 lg:py-24"
-      style={{ background: "#F5F5F6" }}
+      className="relative isolate w-full overflow-hidden py-14 sm:py-16 lg:py-20"
+      style={{
+        background:
+          "radial-gradient(ellipse at 50% 18%, rgba(203,252,1,0.28), transparent 32%), radial-gradient(ellipse at 2% 92%, rgba(172,190,255,0.48), transparent 30%), #fafafa",
+      }}
     >
       <div className="container mx-auto px-6 lg:px-16 xl:px-20">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="section-label mb-4 inline-flex">
-            <span
-              className="w-1.5 h-1.5 rounded-full"
-              style={{ background: "#003BE2" }}
-            />
-            Testimonials
-          </div>
+        <div className="mb-10 grid items-center gap-6 md:mb-12 md:grid-cols-[1fr_1fr] md:gap-12">
           <h2
-            className="font-bold text-gray-900 mb-3"
-            style={{
-              fontFamily: "Poppins, sans-serif",
-              fontSize: "clamp(1.6rem, 3vw, 2.25rem)",
-            }}
+            className="m-0 text-[clamp(1.7rem,3.2vw,2.35rem)] font-bold leading-[1.15] text-gray-950"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Discover What Our
             <br />
             Community Is Saying
           </h2>
-          <p className="text-gray-500 max-w-md mx-auto text-sm">
-            Real stories from real learners. See how ByteSpace is changing
-            lives and careers around the world.
+          <p className="m-0 max-w-xl text-base leading-[1.65] text-gray-600">
+            At ByteSpace, our vibrant community of learners and creators is at
+            the heart of what we do. Hear directly from those who have
+            experienced the transformative journey of learning and creating on
+            our platform. Explore testimonials that reflect the diverse
+            perspectives of enthusiastic learners and accomplished creators.
           </p>
         </div>
 
-        {/* Testimonial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {testimonials.map((t) => (
-            <div key={t.name} className="testimonial-card flex flex-col gap-4">
-              {/* Stars */}
-              <StarRow count={t.rating} />
-
-              {/* Quote */}
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                <div className="w-12 h-12 rounded-full overflow-hidden relative flex-shrink-0 ring-2 ring-gray-100">
+            <article
+              key={t.name}
+              className="flex min-h-[245px] flex-col rounded-2xl bg-white p-5 sm:p-6"
+            >
+              <div className="relative mb-3 h-12 w-12 flex-none overflow-hidden rounded-full">
                   <Image
                     src={t.avatar}
                     alt={t.name}
                     fill
+                    sizes="48px"
                     className="object-cover"
                   />
-                </div>
-                <div>
-                  <p
-                    className="font-semibold text-gray-900 text-sm"
-                    style={{ fontFamily: "Poppins, sans-serif" }}
-                  >
-                    {t.name}
-                  </p>
-                  <p className="text-xs text-gray-400">{t.role}</p>
-                </div>
               </div>
-            </div>
+              <p className="mb-0 text-base font-bold leading-5 text-gray-950">
+                {t.name}
+              </p>
+              <p className="mb-4 mt-0 text-base leading-5 text-blue-600">
+                {t.role}
+              </p>
+              <p className="m-0 text-base leading-[1.65] text-gray-600">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+            </article>
           ))}
         </div>
       </div>
