@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LearningProgressCard from "./LearningProgressCard";
 
 export default function GrowthVisual() {
   return (
@@ -85,17 +86,12 @@ export default function GrowthVisual() {
         className="pointer-events-none absolute top-6 right-[0%] z-10 h-auto w-[100%] max-w-[1100px] object-contain drop-shadow-[0_18px_14px_rgba(20,25,40,0.2)]"
       />
 
-      <div className="absolute right-[10%] top-[45%] z-20 w-[34%] rounded-xl bg-white p-3 shadow-[0_12px_32px_rgba(20,30,70,0.14)] sm:rounded-2xl sm:p-4">
-        <p className="text-xs font-medium text-gray-500">
-          Learning Progress
-        </p>
-        <p className="mt-1 text-3xl font-bold leading-none text-gray-900">
-          55%
-        </p>
-        <div className="mt-2 h-1 rounded-full bg-gray-100">
-          <div className="h-full w-[55%] rounded-full bg-[#CBFC01]" />
-        </div>
-      </div>
+      <LearningProgressCard
+        className="absolute right-[10%] top-[45%] z-20 flex w-[34%] flex-col rounded-xl bg-white p-3 shadow-[0_12px_32px_rgba(20,30,70,0.14)] sm:rounded-2xl sm:p-4"
+        labelClassName="text-xs font-medium text-gray-500"
+        valueClassName="mt-1 text-3xl font-bold leading-none text-gray-900"
+        trackClassName="mt-2 h-1 overflow-hidden rounded-full bg-gray-100"
+      />
 
       <Image
         src="/assets/shapes/spring-2.png"

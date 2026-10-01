@@ -60,30 +60,6 @@ a {
   padding-inline: 1.5rem;
 }
 
-.hero-model-image {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  left: 50%;
-  width: min(92vw, 420px);
-  height: auto;
-  max-height: 68%;
-  object-fit: contain;
-  transform: translateX(-50%);
-}
-
-@media (min-width: 768px) {
-  .hero-model-image {
-    width: min(68vw, 520px);
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-model-image {
-    max-height: 78%;
-  }
-}
-
 @media (min-width: 1024px) {
   .container {
     padding-inline: 4rem;

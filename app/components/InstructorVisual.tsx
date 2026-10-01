@@ -16,19 +16,19 @@ export default function InstructorVisual() {
       {revenueCards.map((card, index) => (
         <div
           key={card.title}
-          className={`absolute left-[2%] z-0 w-[30%] rounded-lg bg-[#063eea] p-2.5 text-white shadow-[0_12px_35px_rgba(20,30,70,0.18)] sm:rounded-xl sm:p-3 ${index === 0 ? "top-[8%]" : "top-[31%]"}`}
+          className={`absolute left-[2%] z-0 rounded-lg bg-[#063eea] p-2.5 text-white shadow-[0_12px_35px_rgba(20,30,70,0.18)] sm:rounded-xl sm:p-3 ${index === 0 ? "top-[8%] w-[42%]" : "top-[31%] w-[30%]"}`}
         >
-          <span className="block text-[8px] leading-tight text-white/75 sm:text-[9px]">
+          <span className="block text-[8px] leading-tight text-white/75 sm:text-xs">
             {card.title}
           </span>
-          <span className="block text-[6px] leading-tight text-white/55 sm:text-[7px]">
+          <span className="block text-[6px] leading-tight text-white/55 sm:text-xs">
             {card.period}
           </span>
           <p className="mb-0 mt-1 text-sm font-bold leading-tight sm:text-base">
             {card.amount}
           </p>
           {card.change ? (
-            <span className="mt-1 inline-block rounded-full bg-[#CBFC01] px-1.5 py-0.5 text-[7px] font-bold leading-none text-gray-900">
+            <span className="mt-1 inline-block rounded-full bg-[#CBFC01] px-1.5 py-0.5 text-[7px] font-semibold leading-none text-gray-900">
               {card.change}
             </span>
           ) : (
@@ -45,7 +45,7 @@ export default function InstructorVisual() {
         width={500}
         height={500}
         sizes="(max-width: 640px) 90vw, 350px"
-        className="absolute bottom-0 left-[5%] z-10 h-auto w-[90%] object-contain drop-shadow-[0_18px_14px_rgba(20,25,40,0.18)]"
+        className="absolute bottom-0 left-1/2 z-10 h-auto w-[min(92vw,420px)] max-w-none -translate-x-1/2 object-contain drop-shadow-[0_18px_14px_rgba(20,25,40,0.18)] md:w-[min(68vw,520px)]"
       />
 
       <Image

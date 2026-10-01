@@ -14,8 +14,8 @@ export default function Navbar() {
 
   return (
     <nav className="absolute inset-x-0 top-0 z-50 bg-transparent text-white">
-      <div className="mx-auto grid min-h-[58px] w-full max-w-[1440px] grid-cols-[1fr_auto] items-center px-6 md:min-h-[68px] md:grid-cols-[1fr_auto_1fr] md:px-[clamp(24px,8.5vw,80px)]">
-        <Link href="/" className="block w-[134px] md:w-[110px]">
+      <div className="mx-auto grid min-h-[100px] w-full max-w-[1440px] grid-cols-[1fr_auto] items-center px-6 md:min-h-[68px] md:grid-cols-[1fr_auto_1fr] md:px-[clamp(24px,8.5vw,80px)]">
+        <Link href="/" className="block w-[164px] md:w-[140px]">
           <Image
             src="/assets/logos/header-logo.png"
             alt="ByteSpace"

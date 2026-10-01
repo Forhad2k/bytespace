@@ -20,7 +20,7 @@ export default function Footer() {
               alt="ByteSpace"
               width={140}
               height={36}
-              className="h-7 w-auto"
+              className="h-10 w-auto"
             />
           </Link>
           <p className="mb-6 text-base leading-relaxed text-gray-600">
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={label}>
                   <Link
                     href={label === "Featured Courses" ? "#courses" : label === "Featured Categories" ? "#categories" : "#"}
-                    className="text-xs text-gray-700 transition-colors hover:text-blue-600"
+                    className="text-[14px] text-gray-700 transition-colors hover:text-blue-600"
                   >
                     {label}
                   </Link>

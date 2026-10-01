@@ -22,10 +22,10 @@ export default function GrowthSection() {
       className="relative isolate w-full overflow-hidden py-12 sm:py-16 lg:py-20"
       style={{
         background:
-          "radial-gradient(ellipse at 18% 8%, rgba(203,252,1,0.28), transparent 30%), radial-gradient(ellipse at 92% 2%, rgba(210,218,247,0.42), transparent 34%), radial-gradient(ellipse at 88% 94%, rgba(172,190,255,0.45), transparent 34%), radial-gradient(ellipse at 4% 88%, rgba(203,252,1,0.22), transparent 28%), #fafafa",
+          "radial-gradient(ellipse at 18% 8%, rgba(202, 252, 1, 0.43), transparent 30%), radial-gradient(ellipse at 92% 2%, rgba(210, 218, 247, 0.6), transparent 34%), radial-gradient(ellipse at 88% 94%, rgba(172, 190, 255, 0.6), transparent 34%), radial-gradient(ellipse at 4% 88%, rgba(202, 252, 1, 0.31), transparent 28%), #fafafa",
       }}
     >
-      <div className="container relative mx-auto flex flex-col gap-8 px-6 sm:gap-10 lg:gap-5 lg:px-12">
+      <div className="container relative mx-auto flex flex-col px-6 sm:gap-10 lg:gap-5 lg:px-12">
         <div className="grid items-center gap-2 lg:min-h-[350px] lg:grid-cols-2 lg:gap-10">
           <div className="order-2 max-w-xl lg:order-1">
             <h2 className="mb-4 text-[clamp(1.85rem,3.4vw,2.55rem)] font-semibold leading-[1.18] text-gray-900">

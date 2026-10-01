@@ -51,7 +51,7 @@ export default function FeaturedCourseCard({
 
       <div className="px-1 pb-1 pt-3 sm:px-1 sm:pt-5">
         <div className="flex items-center justify-between gap-2">
-          <h3 className="min-w-0 truncate text-base font-bold tracking-tight text-gray-950 sm:text-2xl">
+          <h3 className="min-w-0 truncate text-base font-semibold tracking-tight text-gray-950 sm:text-xl">
             {course.title}
           </h3>
           <div className="flex flex-none items-center gap-1 text-sm text-gray-600 sm:text-lg">
@@ -66,7 +66,7 @@ export default function FeaturedCourseCard({
           </div>
         </div>
 
-        <p className="mt-0.5 text-base text-gray-500">
+        <p className="mt-0.5 text-xs text-gray-500">
           by <span className="text-blue-600">{course.instructor}</span>
         </p>
 
@@ -99,8 +99,8 @@ export default function FeaturedCourseCard({
               </span>
             </div>
           </div>
-          <p className="whitespace-nowrap text-base text-gray-500">
-            <span className="text-lg font-bold text-blue-600 sm:text-2xl">
+          <p className="whitespace-nowrap text-xs text-gray-500">
+            <span className="text-lg font-semibold text-blue-600 sm:text-2xl">
               ${course.price}
             </span>
             <span>/lifetime</span>
