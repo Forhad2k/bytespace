@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FeaturedCourseCard from "./FeaturedCourseCard";
+import FeaturedCourseCard from "../components/FeaturedCourseCard";
 
 const studentAvatars = [1, 2, 3, 4].map(
   (student) => `/assets/students/student-${student}.png`,
@@ -41,7 +41,7 @@ const courses = [
     id: 1,
     image: "/assets/card-images/card-image-1.jpg",
     title: "Learn Figma from Basic",
-    instructor: "by purepearl studio",
+    instructor: "purepearl studio",
     rating: 4.9,
     price: 49,
     level: "Beginner",
@@ -54,7 +54,7 @@ const courses = [
     id: 2,
     image: "/assets/card-images/card-image-2.jpg",
     title: "Build Digital Asset",
-    instructor: "by purepearl studio",
+    instructor: "purepearl studio",
     rating: 4.8,
     price: 69,
     level: "Intermediate",
@@ -67,7 +67,7 @@ const courses = [
     id: 3,
     image: "/assets/card-images/card-image-3.jpg",
     title: "The Power of Big Data",
-    instructor: "by purepearl studio",
+    instructor: "purepearl studio",
     rating: 4.7,
     price: 39,
     level: "Beginner",
@@ -80,7 +80,7 @@ const courses = [
     id: 4,
     image: "/assets/card-images/card-image-4.jpg",
     title: "Balancing Productivity and Creativity",
-    instructor: "by purepearl studio",
+    instructor: "purepearl studio",
     rating: 4.6,
     price: 35,
     level: "Beginner",
@@ -93,7 +93,7 @@ const courses = [
     id: 5,
     image: "/assets/card-images/card-image-5.jpg",
     title: "Mastering Money Management",
-    instructor: "by purepearl studio",
+    instructor: "purepearl studio",
     rating: 4.8,
     price: 59,
     level: "Advanced",
@@ -106,7 +106,7 @@ const courses = [
     id: 6,
     image: "/assets/card-images/card-image-6.jpg",
     title: "From Idea to Startup Success",
-    instructor: "by purepearl studio",
+    instructor: "purepearl studio",
     rating: 4.9,
     price: 55,
     level: "Beginner",
@@ -121,10 +121,9 @@ export default function CoursesSection() {
   return (
     <section id="courses" className="w-full py-16 lg:py-24" style={{ background: "#fff" }}>
       <div className="container mx-auto px-6 lg:px-16 xl:px-20">
-        {/* Section Header */}
-        <div className="text-center mb-10">
+        <div className="mb-10 text-center">
           <h2
-            className="font-bold text-gray-900 mb-3"
+            className="mb-3 font-bold text-gray-900"
             style={{
               fontFamily: "Poppins, sans-serif",
               fontSize: "clamp(1.9rem, 3.5vw, 2.6rem)",
@@ -134,13 +133,12 @@ export default function CoursesSection() {
             <br />
             Build Your Skills
           </h2>
-          <p className="text-gray-500 max-w-md mx-auto text-base leading-relaxed">
+          <p className="mx-auto max-w-md text-base leading-relaxed text-gray-500">
             Explore a wide range of expert-led courses designed to help you
             grow, learn, and achieve your goals.
           </p>
         </div>
 
-        {/* Static Course Categories */}
         <div
           aria-label="Course categories"
           className="mb-10 flex flex-col items-center gap-5"
@@ -159,7 +157,7 @@ export default function CoursesSection() {
                 </span>
               ))}
               {rowIndex === 2 && (
-                <span className="px-2 text-sm font-medium text-[#003be2]">
+                <span className="px-2 text-[18px] font-medium text-[#003be2]">
                   + More
                 </span>
               )}
@@ -167,8 +165,7 @@ export default function CoursesSection() {
           ))}
         </div>
 
-        {/* Courses Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((course) => (
             <FeaturedCourseCard key={course.id} course={course} />
           ))}
@@ -193,10 +190,7 @@ export default function CoursesSection() {
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {exploreCategories.map((category) => (
-              <div
-                key={category.name}
-                className="explore-card"
-              >
+              <div key={category.name} className="explore-card">
                 <div className="h-16 w-16">
                   <Image
                     src={category.icon}

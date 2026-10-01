@@ -31,6 +31,7 @@ body {
 
 p {
   font-family: "Satoshi", "Inter", sans-serif;
+  word-spacing: 0.08em;
 }
 
 h1,
@@ -40,11 +41,6 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
-}
-
-img {
-  display: block;
-  max-width: 100%;
 }
 
 a {
@@ -89,7 +85,7 @@ a {
   gap: 0.4rem;
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 16px;
   font-weight: 500;
   cursor: default;
   border: 1.5px solid transparent;

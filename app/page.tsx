@@ -1,11 +1,11 @@
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import LogoTicker from "./components/LogoTicker";
-import CoursesSection from "./components/CoursesSection";
-import GrowthSection from "./components/GrowthSection";
-import CreatorCTASection from "./components/CreatorCTASection";
-import TestimonialsSection from "./components/TestimonialsSection";
-import Footer from "./components/Footer";
+import Navbar from "./sections/Navbar";
+import HeroSection from "./sections/HeroSection";
+import LogoTicker from "./sections/LogoTicker";
+import CoursesSection from "./sections/CoursesSection";
+import GrowthSection from "./sections/GrowthSection";
+import CreatorCTASection from "./sections/CreatorCTASection";
+import TestimonialsSection from "./sections/TestimonialsSection";
+import Footer from "./sections/Footer";
 
 export default function Home() {
   return (

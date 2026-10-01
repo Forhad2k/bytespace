@@ -69,7 +69,6 @@ export default function LogoTicker() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

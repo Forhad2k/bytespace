@@ -13,7 +13,6 @@ export default function CreatorCTASection() {
             backgroundSize: "69px 69px",
           }}
         >
-          {/* Background Shapes */}
           <div className="pointer-events-none absolute left-[-70px] top-[-55px] h-48 w-48 rotate-12 sm:left-[-45px] sm:top-[-75px] sm:h-64 sm:w-64 lg:h-72 lg:w-72">
             <Image
               src="/assets/shapes/spring-2.png"
@@ -57,13 +56,10 @@ export default function CreatorCTASection() {
             <Image src="/assets/shapes/cylinder.png" alt="" fill sizes="(max-width: 640px) 112px, 144px" className="object-contain" />
           </div>
 
-          {/* Content */}
           <div className="relative z-10 mx-auto w-full max-w-[720px] text-center">
             <h2
               className="mb-5 text-[clamp(1.5rem,3.2vw,2.35rem)] font-bold leading-[1.16] text-white"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Unlock Your Potential as a
               <br />
@@ -75,7 +71,7 @@ export default function CreatorCTASection() {
 
             <Link
               href="#join"
-              className="inline-flex min-h-8 items-center justify-center rounded-full bg-[#CBFC01] px-5 py-2 text-[11px] font-medium text-gray-900 transition hover:brightness-95"
+              className="inline-flex min-h-8 items-center justify-center rounded-full bg-[#CBFC01] px-5 py-2 text-[18px] font-medium text-gray-900 transition hover:brightness-95"
             >
               Join as Creator
             </Link>

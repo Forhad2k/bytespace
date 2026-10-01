@@ -1,6 +1,6 @@
 import Image from "next/image";
-import GrowthVisual from "./GrowthVisual";
-import InstructorVisual from "./InstructorVisual";
+import GrowthVisual from "../components/GrowthVisual";
+import InstructorVisual from "../components/InstructorVisual";
 
 const stats = [
   { value: "12K", label: "Students" },
@@ -19,7 +19,7 @@ export default function GrowthSection() {
   return (
     <section
       id="growth"
-      className="relative isolate w-full overflow-hidden py-12 sm:py-16 lg:py-20"
+      className="relative isolate w-full overflow-hidden pt-12 pb-4 sm:pt-16 sm:pb-6 lg:pt-20 lg:pb-8"
       style={{
         background:
           "radial-gradient(ellipse at 18% 8%, rgba(202, 252, 1, 0.43), transparent 30%), radial-gradient(ellipse at 92% 2%, rgba(210, 218, 247, 0.6), transparent 34%), radial-gradient(ellipse at 88% 94%, rgba(172, 190, 255, 0.6), transparent 34%), radial-gradient(ellipse at 4% 88%, rgba(202, 252, 1, 0.31), transparent 28%), #fafafa",
@@ -42,12 +42,10 @@ export default function GrowthSection() {
             <div className="flex flex-wrap gap-7 sm:gap-9">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-4xl font-semibold leading-none text-[#063eea]">
+                  <p className="text-4xl font-medium leading-none text-[#063eea]">
                     {stat.value}
                   </p>
-                  <p className="mt-1 text-base text-gray-500">
-                    {stat.label}
-                  </p>
+                  <p className="mt-1 text-base text-gray-500">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -80,7 +78,13 @@ export default function GrowthSection() {
                   key={benefit}
                   className="flex items-center gap-2.5 text-base font-semibold text-gray-800 sm:text-sm"
                 >
-                    <Image  src="/assets/icons/tick.png" alt="✓" width={20} height={20} className="h-6 w-6 object-contain" />
+                  <Image
+                    src="/assets/icons/tick.png"
+                    alt="✓"
+                    width={20}
+                    height={20}
+                    className="h-6 w-6 object-contain"
+                  />
                   {benefit}
                 </li>
               ))}

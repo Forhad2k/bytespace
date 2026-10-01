@@ -3,7 +3,7 @@ import LearningProgressCard from "./LearningProgressCard";
 
 export default function GrowthVisual() {
   return (
-    <div className="relative mx-auto h-auto w-full max-w-[720px] sm:h-[500px]">
+    <div className="relative mx-auto h-[clamp(280px,90vw,440px)] w-full max-w-[720px] sm:h-[500px]">
       <article className="absolute left-0 z-0 w-[72%] rounded-[20px] border border-gray-300 bg-white p-2.5 shadow-[0_8px_30px_rgba(15,23,42,0.06)] sm:w-[62%] sm:rounded-[24px] sm:p-3 lg:w-[58%]">
         <div className="relative aspect-[1.72] overflow-hidden rounded-[14px] sm:rounded-[17px]">
           <Image

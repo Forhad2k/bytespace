@@ -27,11 +27,11 @@ const testimonials = [
 export default function TestimonialsSection() {
   return (
     <section
-      className="relative isolate h-[80vh] w-full overflow-hidden py-14 sm:py-16 lg:py-20"
+      className="relative isolate min-h-[80vh] w-full overflow-hidden py-12 sm:py-16 lg:py-20"
       style={{
-  background:
-    "radial-gradient(ellipse at 50% 18%, rgba(202, 252, 1, 0.43), transparent 32%), radial-gradient(ellipse at 2% 92%, rgba(172, 190, 255, 0.48), transparent 30%), radial-gradient(circle 1200px at 98% 50%, rgba(202, 252, 1, 0.4), transparent 30%), #fafafa",
-}}
+        background:
+          "radial-gradient(ellipse at 50% 18%, rgba(202, 252, 1, 0.43), transparent 32%), radial-gradient(ellipse at 2% 92%, rgba(172, 190, 255, 0.48), transparent 30%), radial-gradient(circle 1200px at 98% 50%, rgba(202, 252, 1, 0.4), transparent 30%), #fafafa",
+      }}
     >
       <div className="container mx-auto px-6 lg:px-16 xl:px-20">
         <div className="mb-10 grid items-center gap-6 md:mb-12 md:grid-cols-[1fr_1fr] md:gap-12">
@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
             <br />
             Community Is Saying
           </h2>
-          <p className="m-0 max-w-xl text-[18px] leading-[1.65] text-gray-600">
+          <p className="m-0 max-w-xl text-base leading-[1.65] text-gray-600 sm:text-lg">
             At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.
           </p>
         </div>
@@ -52,16 +52,16 @@ export default function TestimonialsSection() {
           {testimonials.map((t) => (
             <article
               key={t.name}
-              className="flex min-h-[245px] flex-col rounded-2xl bg-white p-5 sm:p-6"
+              className="flex h-full min-h-[245px] flex-col rounded-2xl bg-white p-5 sm:p-6"
             >
               <div className="relative mb-3 h-18 w-18 flex-none overflow-hidden rounded-full">
-                  <Image
-                    src={t.avatar}
-                    alt={t.name}
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
+                <Image
+                  src={t.avatar}
+                  alt={t.name}
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
               </div>
               <p className="mb-2 text-base font-bold leading-5 text-gray-950">
                 {t.name}
