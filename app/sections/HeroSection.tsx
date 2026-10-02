@@ -102,13 +102,13 @@ export default function HeroSection() {
       name="search"
       type="search"
       placeholder="Course, topic, creator"
-      className="min-w-0 flex-1 bg-transparent pl-2.5 font-sans text-xs text-[#172033] outline-none placeholder:text-[#9298a5]"
+      className="min-w-0 flex-1 bg-transparent pl-2.5 font-sans text-[14px] text-[#172033] outline-none placeholder:text-[#9298a5]"
     />
   </div>
 
   <button
     type="submit"
-    className="h-11 shrink-0 rounded-full bg-[#cbfc01] px-5 text-xs font-semibold text-[#071225] transition hover:brightness-95"
+    className="h-11 shrink-0 rounded-full bg-[#cbfc01] px-5 text-[14px] font-semibold text-[#071225] transition hover:brightness-95"
   >
     Search
   </button>
