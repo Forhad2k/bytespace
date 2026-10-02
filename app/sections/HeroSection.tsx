@@ -80,34 +80,39 @@ export default function HeroSection() {
           business with our wide range of courses.
         </p>
         <form
-          className="mx-auto mt-[22px] flex h-11 w-full max-w-[470px] items-center gap-[9px] rounded-full bg-white py-1 pl-4 pr-1 text-[#89909f] shadow-[0_8px_24px_rgba(0,20,110,0.12)] md:mt-[28px]"
-          action="#courses"
-        >
-          <svg
-            aria-hidden="true"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20 20-4-4" />
-          </svg>
-          <input
-            name="search"
-            type="search"
-            placeholder="Course, topic, creator"
-            className="min-w-0 flex-1 bg-transparent font-sans text-xs text-[#172033] outline-none placeholder:text-[#9298a5]"
-          />
-          <button
-            type="submit"
-            className="h-9 rounded-full bg-[#cbfc01] px-[18px] text-xs font-semibold text-[#071225] transition hover:brightness-95"
-          >
-            Search
-          </button>
-        </form>
+  className="mx-auto mt-[22px] flex h-11 w-full max-w-[490px] items-center gap-[14px] md:mt-[28px]"
+  action="#courses"
+>
+  <div className="flex h-11 min-w-0 flex-1 items-center rounded-full bg-white px-5 shadow-[0_8px_24px_rgba(0,20,110,0.12)]">
+    <svg
+      aria-hidden="true"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      className="shrink-0 text-[#89909f]"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-4-4" />
+    </svg>
+
+    <input
+      name="search"
+      type="search"
+      placeholder="Course, topic, creator"
+      className="min-w-0 flex-1 bg-transparent pl-2.5 font-sans text-xs text-[#172033] outline-none placeholder:text-[#9298a5]"
+    />
+  </div>
+
+  <button
+    type="submit"
+    className="h-11 shrink-0 rounded-full bg-[#cbfc01] px-5 text-xs font-semibold text-[#071225] transition hover:brightness-95"
+  >
+    Search
+  </button>
+</form>
       </div>
 
       {/* Cards: grid in the flow below lg, original absolute layout from lg up */}
